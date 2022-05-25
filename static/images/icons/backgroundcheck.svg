@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 512 512" width="512px" height="512px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <g transform="matrix(7.555555, 0, 0, 7.555555, -49.366837, -50.181244)" bx:origin="0.528677 0.501038">
+    <g>
+      <path d="M30.5,33c1.93,0,3.5,1.57,3.5,3.5S32.43,40,30.5,40S27,38.43,27,36.5S28.57,33,30.5,33 M30.5,32c-2.48,0-4.5,2.02-4.5,4.5 s2.02,4.5,4.5,4.5s4.5-2.02,4.5-4.5S32.98,32,30.5,32L30.5,32z" style="fill: rgb(255, 255, 255);"/>
+    </g>
+    <line x1="43.5" x2="55.5" y1="34.5" y2="34.5" class="st7" style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255); stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+    <line x1="43.5" x2="53.5" y1="38.5" y2="38.5" class="st7" style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255); stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+    <line x1="43.5" x2="55.5" y1="42.5" y2="42.5" class="st7" style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255); stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+    <line x1="49.868" x2="53.5" y1="46.5" y2="46.5" class="st7" style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255); stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+    <path d="M 23.512 48.996 L 23.509 47.996 C 23.497 44.126 26.62 40.997 30.488 40.996 C 34.356 40.995 36.045 43.751 36.045 43.751" class="st6" style="fill: none; stroke: rgb(255, 255, 255); stroke-linejoin: round; stroke-miterlimit: 10;" transform="matrix(0.999995, 0.003019, -0.003019, 0.999995, 0.135982, -0.091906)"/>
+  </g>
+  <g transform="matrix(7.555555, 0, 0, 7.555555, -42.444431, -12.111097)" bx:origin="0.5 0.392033">
+    <path d="M 25 50.971 L 20 50.971 C 18.34 50.971 17 49.312 17 47.255 L 17 23.716 C 17 21.66 18.34 20 20 20 L 59 20 C 60.66 20 62 21.66 62 23.716 L 62 47.255 C 62 49.312 60.66 50.971 59 50.971 L 54 50.971" class="st4" style="fill: none; stroke: rgb(255, 255, 255); stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <circle cx="39.5" cy="49.5" r="10" class="st2" style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+    <polyline points="35.04,49.62 38.29,52.27 44,47 &#9;" class="st2" style="fill: none; stroke: rgb(255, 255, 255); stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+  </g>
+</svg>
