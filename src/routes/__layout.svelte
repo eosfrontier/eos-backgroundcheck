@@ -61,12 +61,15 @@
 		border-top: 2px dashed #2c3445;
 		transition: 0.4s;
 	}
+	footer {
+		grid-area: footer;
+	}
 </style>
 
 <header>
 
 	<img class="logo" src="images/ICC_Logo.svg" alt="logo" title="ICC logo" />
-	<p class="logo-text text">Personnnel Management</p>
+	<p class="logo-text text">Personnel Management</p>
 	<div class="line" />
 	<p class="card-text text">Background Check</p>
 	<img
@@ -75,6 +78,7 @@
 		alt="id card"
 		title="Background Check ID Card" />
 </header>
-<main class="grid">
+<main>
 	<slot />
 </main>
+<footer>© 2022 - Stichting Eos Dynamic.</footer>
