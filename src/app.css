@@ -1,107 +1,99 @@
-@import '@fontsource/fira-mono';
-
 :root {
-	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-mono: 'Fira Mono', monospace;
-	--pure-white: #ffffff;
-	--primary-color: #b9c6d2;
-	--secondary-color: #d0dde9;
-	--tertiary-color: #edf0f8;
-	--accent-color: #ff3e00;
-	--heading-color: rgba(0, 0, 0, 0.7);
-	--text-color: #444444;
-	--background-without-opacity: rgba(255, 255, 255, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	--white-text-color: #ccd1dd;
+	--faded-text-color: #838795;
+	--chargen-red: #ff8e7a;
+	--chargen-green: #31e184;
+	--chargen-blue: #507ef2;
+	--chargen-teal: #67dfd8;
+	--chargen-grey: #3b414e;
+	--background-color-z0: #262e3e;
+	--background-color-z1: #2c3445;
+	--background-color-z2: #323846;
+	--background-color-z3: #424959;
+	--filter-make-white: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%)
+		hue-rotate(185deg) brightness(96%) contrast(90%);
+}
+::selection {
+	background: var(--chargen-green);
+	color: white;
+}
+html {
+	background: var(--background-color-z0);
+	font-family: sans-serif, arial, verdana;
+	text-size-adjust: 100%;
+	font-size: 10px;
 }
 
 body {
-	min-height: 100vh;
+	background: var(--background-color-z0);
+	color: var(--white-text-color);
+	font-family: 'Roboto-regular', sans-serif, arial;
 	margin: 0;
-	background-color: var(--primary-color);
-	background: linear-gradient(
-		180deg,
-		var(--primary-color) 0%,
-		var(--secondary-color) 10.45%,
-		var(--tertiary-color) 41.35%
-	);
+	padding: 0;
+	font-size: 14px;
 }
-
-body::before {
-	content: '';
-	width: 80vw;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 10vw;
-	z-index: -1;
-	background: radial-gradient(
-		50% 50% at 50% 50%,
-		var(--pure-white) 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	opacity: 0.05;
+.grid {
+	width: 100%;
+	height: 99vh;
+	transition: 0.4s;
+	margin-top: 1vh;
+	display: grid;
+	grid-template-columns: 1fr 1170px 1fr;
+	grid-template-rows: 64px 1fr 32px;
+	grid-gap: 2px 2px;
+	grid-template-areas: 'wsleft logo wsright' 'wsleft main wsright' 'wsleft footer wsright';
 }
-
-#svelte {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+.button {
+	cursor: pointer;
+	color: var(--white-text-color);
+	background: #3b414e;
+	border: 1px solid var(--white-text-color);
+	border-radius: 5px;
+	padding: 0.75rem 1.75rem;
+	transition: 0.4s;
+	margin-bottom: 0.5rem;
+	text-shadow: 1px 1px 4px rgb(38 46 62 / 60%);
 }
-
-h1,
-h2,
-p {
-	font-weight: 400;
-	color: var(--heading-color);
+input[type="text"]{
+    background: none;
+    border: 0;
+    border-bottom: 2px solid var(--faded-text-color);
+    color: var(--faded-text-color);
+    padding: 0.8rem 0.25rem;
+    transition: 0.3s;
 }
-
-p {
-	line-height: 1.5;
+input[type="text"]:hover,input[type="text"]:active,input[type="text"]:focus{
+	border: 0;
+    color: var(--white-text-color);
+    border-bottom: 2px solid var(--chargen-blue);
 }
+input[type="textarea"]{
 
-a {
-	color: var(--accent-color);
-	text-decoration: none;
+    background: var(--background-color-z3);
+    margin-top: 1rem;
+    padding: 5px 5px 0 5px;
+    border: 1px solid var(--faded-text-color);
+	resize: both;
+	overflow: auto;
 }
-
-a:hover {
-	text-decoration: underline;
+input[type="textarea"]:hover,input[type="textarea"]:active,input[type="textarea"]:focus{
+	border: 1px solid var(--chargen-blue);
+    color: var(--white-text-color);
 }
-
-h1 {
-	font-size: 2rem;
-	text-align: center;
+@media (max-width: 1200px) {
+	.grid {
+		grid-template-columns: 1fr 970px 1fr;
+		grid-template-rows: 64px 1fr 32px;
+		grid-template-areas: 'wsleft logo wsright' 'wsleft main wsright' 'wsleft footer wsright';
+	}
 }
-
-h2 {
-	font-size: 1rem;
-}
-
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--text-color);
-}
-
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
+@media (max-width: 992px) {
+	.grid {
+		min-height: 90vh;
+		height: auto;
+		margin-top: 0;
+		grid-template-columns: 1fr;
+		grid-template-rows: 64px 1fr 32px;
+		grid-template-areas: 'logo' 'main' 'footer';
 	}
 }
