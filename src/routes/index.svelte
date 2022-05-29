@@ -36,27 +36,8 @@
 </style>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Personnel Background Check</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="images/icons/backgroundcheck.svg" alt="Welcome" />
-			</picture>
-		</div>
-		to your new
-		<br />
-		SvelteKit app
-	</h1>
-
-	<h2>
-		try editing
-		<strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<section />
