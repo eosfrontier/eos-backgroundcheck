@@ -1,7 +1,17 @@
+html {
+	background: #262e3e;
+	font-family: sans-serif, arial, verdana;
+	text-size-adjust: 100%;
+	font-size: 10px;
+}
+
 body {
 	background: #262e3e;
 	color: #ccd1dd;
 	font-family: 'Roboto-regular', sans-serif, arial;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
 }
 .grid {
 	width: 100%;

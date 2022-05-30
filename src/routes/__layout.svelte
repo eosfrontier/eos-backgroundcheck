@@ -8,7 +8,7 @@
 		grid-area: logo;
 		background: #323846;
 		width: 100%;
-		height: 64px;
+		height: 6.4rem;
 		overflow: hidden;
 		transition: 0.4s;
 	}
@@ -20,35 +20,35 @@
 	}
 	.logo {
 		position: relative;
-		height: 79px;
-		margin-top: -5px;
+		height: 7.9rem;
+		margin-top: -0.5rem;
 		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
 			brightness(96%) contrast(90%);
 	}
 	.card {
 		position: relative;
-		height: 72px;
-		top: -8px;
-		left: -16px;
+		height: 7.2rem;
+		top: -0.8rem;
+		left: -1.6rem;
 		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
 			brightness(96%) contrast(90%);
 	}
 	.text {
 		position: relative;
-		max-width: 100px;
-		font-size: 15px;
-		right: 6px;
-		bottom: -10px;
+		max-width: 10rem;
+		font-size: 1.5rem;
+		right: 0.6rem;
+		bottom: -1rem;
 	}
 	.logo-text {
 		text-align: right;
 	}
 	.card-text {
-		right: -4px;
+		right: -0.4rem;
 	}
 	.line {
-		border-left: 2px solid white;
-		margin: 8px;
+		border-left: 0.2rem solid white;
+		margin: 0.8rem;
 		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
 			brightness(96%) contrast(90%);
 	}
@@ -58,11 +58,18 @@
 		height: 100%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		border-top: 2px dashed #2c3445;
+		border-top: 0.2rem dashed #2c3445;
 		transition: 0.4s;
 	}
 	footer {
 		grid-area: footer;
+		background: #323846;
+		width: 100%;
+		font-size: 14px;
+	}
+	.footertext {
+		margin: 0.8rem;
+		color: #838795;
 	}
 </style>
 
@@ -81,4 +88,6 @@
 <main>
 	<slot />
 </main>
-<footer>© 2022 - Stichting Eos Dynamic.</footer>
+<footer>
+	<p class="footertext">© 2022 - Stichting Eos Dynamic.</p>
+</footer>
