@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import '../app.css';
 </script>
 
@@ -66,6 +68,27 @@
 		margin: 0.8rem;
 		color: var(--faded-text-color);
 	}
+
+	nav {
+		font-size: 20px;
+	}
+	a {
+		color: var(--white-text-color);
+		text-decoration: none;
+	}
+	.nav-hover-effect {
+		background: linear-gradient(var(--white-text-color) 0 0) no-repeat
+			calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + 0.2rem);
+		transition: 0.3s calc(var(--i, 0) * 0.3s),
+			background-position 0.3s calc(0.3s - calc(var(--i, 0) * 0.3s));
+	}
+	.nav-hover-effect:hover {
+		--i: 1;
+		color: var(--background-color-z2);
+	}
+	.active {
+		box-shadow: inset 0 -0.2rem 0 0 var(--white-text-color);
+	}
 </style>
 
 <header>
@@ -79,9 +102,24 @@
 		alt="id card"
 		title="Background Check ID Card" />
 	<nav>
-		<a href="/backgroundform">Background Form</a>
-		<a href="/backgroundsearch">SL Tool: Background Search</a>
-		<a href="/backgroundsearch">SL Tool: Background Filled List</a>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundform'}
+			href="/backgroundform">
+			Background Form
+		</a>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundsearch'}
+			href="/backgroundsearch">
+			SL Tool: Background Search
+		</a>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundlist'}
+			href="/backgroundlist">
+			SL Tool: Background Filled List
+		</a>
 	</nav>
 </header>
 <main>
