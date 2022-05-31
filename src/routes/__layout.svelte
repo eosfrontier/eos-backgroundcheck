@@ -6,11 +6,10 @@
 	header {
 		display: flex;
 		grid-area: logo;
-		background: #323846;
+		background: var(--background-color-z2);
 		width: 100%;
 		height: 6.4rem;
 		overflow: hidden;
-		transition: 0.4s;
 	}
 	img {
 		max-width: 100%;
@@ -22,16 +21,14 @@
 		position: relative;
 		height: 7.9rem;
 		margin-top: -0.5rem;
-		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
-			brightness(96%) contrast(90%);
+		filter: var(--filter-make-white);
 	}
 	.card {
 		position: relative;
 		height: 7.2rem;
 		top: -0.8rem;
 		left: -1.6rem;
-		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
-			brightness(96%) contrast(90%);
+		filter: var(--filter-make-white);
 	}
 	.text {
 		position: relative;
@@ -47,34 +44,31 @@
 		right: -0.4rem;
 	}
 	.line {
-		border-left: 0.2rem solid white;
+		border-left: 0.2rem solid var(--white-text-color);
 		margin: 0.8rem;
-		filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%) hue-rotate(185deg)
-			brightness(96%) contrast(90%);
 	}
 	main {
 		grid-area: main;
+		background: var(--background-color-z1);
 		display: flex;
 		height: 100%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		border-top: 0.2rem dashed #2c3445;
-		transition: 0.4s;
+		border-top: 0.2rem dashed var(--background-color-z0);
 	}
 	footer {
 		grid-area: footer;
-		background: #323846;
+		background: var(--background-color-z2);
 		width: 100%;
 		font-size: 14px;
 	}
 	.footertext {
 		margin: 0.8rem;
-		color: #838795;
+		color: var(--faded-text-color);
 	}
 </style>
 
 <header>
-
 	<img class="logo" src="images/ICC_Logo.svg" alt="logo" title="ICC logo" />
 	<p class="logo-text text">Personnel Management</p>
 	<div class="line" />
@@ -84,6 +78,11 @@
 		src="images/icons/backgroundcheck.svg"
 		alt="id card"
 		title="Background Check ID Card" />
+	<nav>
+		<a href="/backgroundform">Background Form</a>
+		<a href="/backgroundsearch">SL Tool: Background Search</a>
+		<a href="/backgroundsearch">SL Tool: Background Filled List</a>
+	</nav>
 </header>
 <main>
 	<slot />
