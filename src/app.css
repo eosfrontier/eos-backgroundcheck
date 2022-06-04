@@ -1,11 +1,20 @@
 :root {
 	--white-text-color: #ccd1dd;
 	--faded-text-color: #838795;
+	--chargen-red: #ff8e7a;
+	--chargen-green: #31e184;
+	--chargen-blue: #507ef2;
+	--chargen-teal: #67dfd8;
+	--chargen-grey: #3b414e;
 	--background-color-z0: #262e3e;
 	--background-color-z1: #2c3445;
 	--background-color-z2: #323846;
 	--filter-make-white: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%)
 		hue-rotate(185deg) brightness(96%) contrast(90%);
+}
+::selection {
+	background: var(--chargen-green);
+	color: white;
 }
 html {
 	background: var(--background-color-z0);
