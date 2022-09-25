@@ -9,6 +9,7 @@
 	--background-color-z0: #262e3e;
 	--background-color-z1: #2c3445;
 	--background-color-z2: #323846;
+	--background-color-z3: #424959;
 	--filter-make-white: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(214%)
 		hue-rotate(185deg) brightness(96%) contrast(90%);
 }
@@ -41,6 +42,43 @@ body {
 	grid-template-rows: 64px 1fr 32px;
 	grid-gap: 2px 2px;
 	grid-template-areas: 'wsleft logo wsright' 'wsleft main wsright' 'wsleft footer wsright';
+}
+.button {
+	cursor: pointer;
+	color: var(--white-text-color);
+	background: #3b414e;
+	border: 1px solid var(--white-text-color);
+	border-radius: 5px;
+	padding: 0.75rem 1.75rem;
+	transition: 0.4s;
+	margin-bottom: 0.5rem;
+	text-shadow: 1px 1px 4px rgb(38 46 62 / 60%);
+}
+input[type="text"]{
+    background: none;
+    border: 0;
+    border-bottom: 2px solid var(--faded-text-color);
+    color: var(--faded-text-color);
+    padding: 0.8rem 0.25rem;
+    transition: 0.3s;
+}
+input[type="text"]:hover,input[type="text"]:active,input[type="text"]:focus{
+	border: 0;
+    color: var(--white-text-color);
+    border-bottom: 2px solid var(--chargen-blue);
+}
+input[type="textarea"]{
+
+    background: var(--background-color-z3);
+    margin-top: 1rem;
+    padding: 5px 5px 0 5px;
+    border: 1px solid var(--faded-text-color);
+	resize: both;
+	overflow: auto;
+}
+input[type="textarea"]:hover,input[type="textarea"]:active,input[type="textarea"]:focus{
+	border: 1px solid var(--chargen-blue);
+    color: var(--white-text-color);
 }
 @media (max-width: 1200px) {
 	.grid {

@@ -4,48 +4,6 @@
 	import '../app.css';
 </script>
 
-<header>
-	<img class="logo" src="images/ICC_Logo.svg" alt="logo" title="ICC logo" />
-	<p class="logo-text text">Personnel Management</p>
-	<div class="line" />
-	<p class="card-text text">Background Check</p>
-	<img
-		class="card"
-		src="images/icons/backgroundcheck.svg"
-		alt="id card"
-		title="Background Check ID Card"
-	/>
-	<nav>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundform'}
-			href="/backgroundform"
-		>
-			Background Form
-		</a>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundsearch'}
-			href="/backgroundsearch"
-		>
-			SL Tool: Background Search
-		</a>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundlist'}
-			href="/backgroundlist"
-		>
-			SL Tool: Background Filled List
-		</a>
-	</nav>
-</header>
-<main>
-	<slot />
-</main>
-<footer>
-	<p class="footertext">© 2022 - Stichting Eos Dynamic.</p>
-</footer>
-
 <style>
 	header {
 		display: flex;
@@ -93,6 +51,7 @@
 	}
 	main {
 		grid-area: main;
+		box-sizing: border-box;
 		background: var(--background-color-z1);
 		display: flex;
 		height: 100%;
@@ -132,3 +91,41 @@
 		box-shadow: inset 0 -0.2rem 0 0 var(--white-text-color);
 	}
 </style>
+
+<header>
+	<img class="logo" src="images/ICC_Logo.svg" alt="logo" title="ICC logo" />
+	<p class="logo-text text">Personnel Management</p>
+	<div class="line" />
+	<p class="card-text text">Background Check</p>
+	<img
+		class="card"
+		src="images/icons/backgroundcheck.svg"
+		alt="id card"
+		title="Background Check ID Card" />
+	<nav>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundform'}
+			href="/backgroundform">
+			Background Form
+		</a>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundsearch'}
+			href="/backgroundsearch">
+			SL Tool: Background Search
+		</a>
+		<a
+			class="nav-hover-effect"
+			class:active={$page.url.pathname === '/backgroundlist'}
+			href="/backgroundlist">
+			SL Tool: Background Filled List
+		</a>
+	</nav>
+</header>
+<main>
+	<slot />
+</main>
+<footer>
+	<p class="footertext">© 2022 - Stichting Eos Dynamic.</p>
+</footer>
