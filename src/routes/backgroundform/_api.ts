@@ -1,5 +1,5 @@
 let joomlaUserData:any
-// let characterBackgroundInfo
+let characterBackgroundInfo
   export async function resolveJoomlaSession() {
     // this doesn't work yet, we need to ask josh why
     await fetch('/idandgroups.php', {
@@ -18,5 +18,3 @@ let joomlaUserData:any
     return joomlaUserData
    // resolveUserType(joomlaUserData) «« do later for spelleider part of app
   }
-
-  // export 
