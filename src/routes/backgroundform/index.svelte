@@ -2,25 +2,25 @@
 	import '../../app.css';
 	import Fa from 'svelte-fa';
   	import { faUser } from '@fortawesome/free-solid-svg-icons';
-	  import { faUsers } from '@fortawesome/free-solid-svg-icons';
-	  import { faHouse } from '@fortawesome/free-solid-svg-icons';
-	  import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-	  import { faCity } from '@fortawesome/free-solid-svg-icons';
-	  import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
-	  import {faGraduationCap} from '@fortawesome/free-solid-svg-icons';
-	  import {faAngleDoubleUp} from '@fortawesome/free-solid-svg-icons';
-	  import {faHandsPraying} from '@fortawesome/free-solid-svg-icons';
-	  import {faIdCardClip} from '@fortawesome/free-solid-svg-icons';
-	  import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
-	  import {faHandcuffs} from '@fortawesome/free-solid-svg-icons';
-	  import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
-	  import {faDroplet} from '@fortawesome/free-solid-svg-icons';
-	  import {faNotesMedical} from '@fortawesome/free-solid-svg-icons';
-	  import {faAward} from '@fortawesome/free-solid-svg-icons';
-	  import {faMask} from '@fortawesome/free-solid-svg-icons';
-	  import {faUserSecret} from '@fortawesome/free-solid-svg-icons';
-	  import {faUserGroup} from '@fortawesome/free-solid-svg-icons';
-	  import {faEllipsis} from '@fortawesome/free-solid-svg-icons';
+	import { faUsers } from '@fortawesome/free-solid-svg-icons';
+	import { faHouse } from '@fortawesome/free-solid-svg-icons';
+	import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+	import { faCity } from '@fortawesome/free-solid-svg-icons';
+	import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+	import {faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+	import {faAngleDoubleUp} from '@fortawesome/free-solid-svg-icons';
+	import {faHandsPraying} from '@fortawesome/free-solid-svg-icons';
+	import {faIdCardClip} from '@fortawesome/free-solid-svg-icons';
+	import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
+	import {faHandcuffs} from '@fortawesome/free-solid-svg-icons';
+	import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons';
+	import {faDroplet} from '@fortawesome/free-solid-svg-icons';
+	import {faNotesMedical} from '@fortawesome/free-solid-svg-icons';
+	import {faAward} from '@fortawesome/free-solid-svg-icons';
+	import {faMask} from '@fortawesome/free-solid-svg-icons';
+	import {faUserSecret} from '@fortawesome/free-solid-svg-icons';
+	import {faUserGroup} from '@fortawesome/free-solid-svg-icons';
+	import {faEllipsis} from '@fortawesome/free-solid-svg-icons';
 
 
 	let characterInformation = {
