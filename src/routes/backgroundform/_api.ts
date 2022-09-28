@@ -1,10 +1,11 @@
+let joomlaUserData:any
+// let characterBackgroundInfo
   export async function resolveJoomlaSession() {
     // this doesn't work yet, we need to ask josh why
-    await fetch('/lib/idandgroups.php', {
+    await fetch('/idandgroups.php', {
       method: 'GET',
       mode: 'cors',
       headers: {
-        token: environment.token,
         'cache-control': 'no-cache',
       },
     }).then(async function (response) {
@@ -14,7 +15,8 @@
         console.log('[resolveJoomlaSession] something went wrong')
       }
     })
+    return joomlaUserData
    // resolveUserType(joomlaUserData) «« do later for spelleider part of app
   }
 
-  export 
+  // export 

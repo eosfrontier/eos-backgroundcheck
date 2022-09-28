@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../../app.css';
+	import { resolveJoomlaSession } from './_api';
 	import Fa from 'svelte-fa';
   	import { faUser } from '@fortawesome/free-solid-svg-icons';
 	import { faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -55,6 +56,10 @@
     "miscellany": ""
 }
 
+function clickTest() {
+	console.log(resolveJoomlaSession())
+}
+
 </script>
 
 <style>
@@ -75,6 +80,7 @@
 	.gridleft {grid-column-start:1;}
 </style>
 
+<button on:click={clickTest}>clickme</button>
 <div class="formgrid">
 
 <label class="gridleft"><Fa icon={faUser}/> Full Name <input type="text" disabled value={characterInformation.chargen_name}></label> 
