@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../../app.css';
 	import { resolveJoomlaSession } from './_api';
+	import { getActiveCharacterId } from './_api';
+	import { getCharacterBackgroundInformation } from './_api';
 	import Fa from 'svelte-fa';
   	import { faUser } from '@fortawesome/free-solid-svg-icons';
 	import { faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -56,8 +58,18 @@
     "miscellany": ""
 }
 
+let JoomlaaccountId:any
+let activeCharID:any
+
 function clickTest() {
 	console.log(resolveJoomlaSession())
+}
+function clickTest2() {
+	activeCharID = getActiveCharacterId(747)
+	console.log(activeCharID)
+}
+function clickTest3() {
+	console.log(getCharacterBackgroundInformation())
 }
 
 </script>
@@ -78,9 +90,12 @@ function clickTest() {
 		margin:0.8rem 0;
 		}
 	.gridleft {grid-column-start:1;}
+	button{ height:3rem;}
 </style>
 
 <button on:click={clickTest}>clickme</button>
+<button on:click={clickTest2}>thenclickme</button>
+<button on:click={clickTest3}>lastlyclickme</button>
 <div class="formgrid">
 
 <label class="gridleft"><Fa icon={faUser}/> Full Name <input type="text" disabled value={characterInformation.chargen_name}></label> 
