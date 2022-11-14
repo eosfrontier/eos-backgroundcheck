@@ -28,48 +28,40 @@
 
 	let characterInformation = {
     "id": "0",
-    "characterID": "42",
-    "chargen_name": "Nimuel Agati Iskandu",
-    "first_name": "Nimuel",
-    "family_name": "Agati Iskandu",
-    "residence": "Bastion Eos",
-    "homeplanet": "Eos",
-    "birthplanet": "Hideyoshi",
-    "birthdate": "3/Aug/210",
-    "name_father": "Arturo (Lito) Agati Iskandu",
-    "name_mother": "Hahnna Agati Iskandu",
-    "birthplace": "Hideyoshi",
-    "faction": "dugo",
-    "education": "Militair",
-    "current_position": "Apatar",
-    "bloodtype": "A",
-    "religion": "Geen",
-    "company_ownership": "nvt",
-    "court_accusations": "nvt",
-    "court_sentences": "nvt",
+    "characterID": "",
+    "chargen_name": "",
+    "first_name": "",
+    "family_name": "",
+    "residence": "",
+    "homeplanet": "",
+    "birthplanet": "",
+    "birthdate": "",
+    "name_father": "",
+    "name_mother": "",
+    "birthplace": "",
+    "faction": "",
+    "education": "",
+    "current_position": "",
+    "bloodtype": "",
+    "religion": "",
+    "company_ownership": "",
+    "court_accusations": "",
+    "court_sentences": "",
     "special_medical_circumstances": "",
     "memberships": "",
-    "life_achievements": "Appointed Apatar Kepala of Eos Colony",
+    "life_achievements": "",
     "little_secrets": "",
     "big_secrets": "",
-    "political_preference": "Inabayan",
-    "other_family": "Halina Agati Iskandu",
+    "political_preference": "",
+    "other_family": "",
     "notable_friends": "",
     "miscellany": ""
 }
 
-let JoomlaaccountId:any
-let activeCharID:any
-
-function clickTest() {
-	console.log(resolveJoomlaSession())
-}
-function clickTest2() {
-	activeCharID = getActiveCharacterId(747)
-	console.log(activeCharID)
-}
-function clickTest3() {
-	console.log(getCharacterBackgroundInformation())
+async function getCharacter() {
+	let joomlaId:number = await resolveJoomlaSession()
+	let activeCharID:number = await getActiveCharacterId(joomlaId)
+	characterInformation = await getCharacterBackgroundInformation(activeCharID)
 }
 
 </script>
@@ -93,9 +85,7 @@ function clickTest3() {
 	button{ height:3rem;}
 </style>
 
-<button on:click={clickTest}>clickme</button>
-<button on:click={clickTest2}>thenclickme</button>
-<button on:click={clickTest3}>lastlyclickme</button>
+<button on:click={getCharacter}>get Character</button>
 <div class="formgrid">
 
 <label class="gridleft"><Fa icon={faUser}/> Full Name <input type="text" disabled value={characterInformation.chargen_name}></label> 

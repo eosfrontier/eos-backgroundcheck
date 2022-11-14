@@ -67,14 +67,14 @@ let orthancdev:string = 'https://apidev2.eosfrontier.space/orthanc/v2/'
       return activeCharacterId.characterID
     }
 
-  export async function getCharacterBackgroundInformation() {
+  export async function getCharacterBackgroundInformation(characterID:number) {
     await fetch(orthancdev + 'chars_all/background_check/', {
       method: 'GET',
       mode: 'cors',
       headers: {
         token: 'rj4lki7oLzRsCpmmyrNM',
         'cache-control': 'no-cache',
-        char_id: 42,
+        char_id: characterID,
       },
     }).then(async function (response) {
       if (response.status == 200) {
