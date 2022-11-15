@@ -3,12 +3,12 @@
 </script>
 
 <script lang="ts">
-	import BackGroundForm from './backgroundform/index.svelte';
+	import BackGroundForm from './backgroundform/+page.svelte';
 </script>
 
 <svelte:head>
 	<title>Personnel Background Check</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Eos Frontier Background Information Check Form" />
 </svelte:head>
 
 <BackGroundForm />
