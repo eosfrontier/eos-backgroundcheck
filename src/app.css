@@ -54,31 +54,34 @@ body {
 	margin-bottom: 0.5rem;
 	text-shadow: 1px 1px 4px rgb(38 46 62 / 60%);
 }
-input[type="text"]{
-    background: none;
-    border: 0;
-    border-bottom: 2px solid var(--faded-text-color);
-    color: var(--faded-text-color);
-    padding: 0.8rem 0.25rem;
-    transition: 0.3s;
-}
-input[type="text"]:hover,input[type="text"]:active,input[type="text"]:focus{
+input[type='text'] {
+	background: none;
 	border: 0;
-    color: var(--white-text-color);
-    border-bottom: 2px solid var(--chargen-blue);
+	border-bottom: 2px solid var(--faded-text-color);
+	color: var(--faded-text-color);
+	padding: 0.8rem 0.25rem;
+	transition: 0.3s;
 }
-input[type="textarea"]{
-
-    background: var(--background-color-z3);
-    margin-top: 1rem;
-    padding: 5px 5px 0 5px;
-    border: 1px solid var(--faded-text-color);
+input[type='text']:hover,
+input[type='text']:active,
+input[type='text']:focus {
+	border: 0;
+	color: var(--white-text-color);
+	border-bottom: 2px solid var(--chargen-blue);
+}
+input[type='textarea'] {
+	background: var(--background-color-z3);
+	margin-top: 1rem;
+	padding: 5px 5px 0 5px;
+	border: 1px solid var(--faded-text-color);
 	resize: both;
 	overflow: auto;
 }
-input[type="textarea"]:hover,input[type="textarea"]:active,input[type="textarea"]:focus{
+input[type='textarea']:hover,
+input[type='textarea']:active,
+input[type='textarea']:focus {
 	border: 1px solid var(--chargen-blue);
-    color: var(--white-text-color);
+	color: var(--white-text-color);
 }
 @media (max-width: 1200px) {
 	.grid {
@@ -98,23 +101,33 @@ input[type="textarea"]:hover,input[type="textarea"]:active,input[type="textarea"
 	}
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto-Light","Roboto-Thin",sans-serif,arial;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto-Light', 'Roboto-Thin', sans-serif, arial;
 }
 
-h1, h2 {
-    text-transform: uppercase;
+h1,
+h2 {
+	text-transform: uppercase;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
 }
 h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
+	margin: 0.67em 0;
+	font-size: 2em;
 }
 
 hr {
