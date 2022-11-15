@@ -62,6 +62,7 @@ let orthancdev:string = 'https://apidev2.eosfrontier.space/orthanc/v2/'
           activeCharacterId = await response.json()
         } else {
           console.log('[getActiveCharacterId] something went wrong')
+          console.log(response.statusText)
         }
       })
       return activeCharacterId.characterID

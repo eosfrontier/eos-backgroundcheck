@@ -1,9 +1,11 @@
 <script lang="ts">
+	import { beforeUpdate } from 'svelte';
 	import '../../app.css';
 	import { resolveJoomlaSession } from './_api';
 	import { getActiveCharacterId } from './_api';
 	import { getCharacterBackgroundInformation } from './_api';
 	import Fa from 'svelte-fa';
+	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
   	import { faUser } from '@fortawesome/free-solid-svg-icons';
 	import { faUsers } from '@fortawesome/free-solid-svg-icons';
 	import { faHouse } from '@fortawesome/free-solid-svg-icons';
@@ -26,44 +28,79 @@
 	import {faEllipsis} from '@fortawesome/free-solid-svg-icons';
 
 
-	let characterInformation = {
-    "id": "0",
-    "characterID": "",
-    "chargen_name": "",
-    "first_name": "",
-    "family_name": "",
-    "residence": "",
-    "homeplanet": "",
-    "birthplanet": "",
-    "birthdate": "",
-    "name_father": "",
-    "name_mother": "",
-    "birthplace": "",
-    "faction": "",
-    "education": "",
-    "current_position": "",
-    "bloodtype": "",
-    "religion": "",
-    "company_ownership": "",
-    "court_accusations": "",
-    "court_sentences": "",
-    "special_medical_circumstances": "",
-    "memberships": "",
-    "life_achievements": "",
-    "little_secrets": "",
-    "big_secrets": "",
-    "political_preference": "",
-    "other_family": "",
-    "notable_friends": "",
-    "miscellany": ""
-}
+	interface characterInformation {
+		id: number;
+		characterID: number;
+		chargen_name: string;
+		first_name: string;
+		family_name: string;
+		residence: string;
+		homeplanet: string;
+		birthplanet: string;
+		birthdate: string;
+		name_father: string;
+		name_mother: string;
+		birthplace: string;
+		faction: string;
+		education: string;
+		current_position: string;
+		bloodtype: string;
+		religion: string;
+		company_ownership: string;
+		court_accusations: string;
+		court_sentences: string;
+		special_medical_circumstances: string;
+		memberships: string;
+		life_achievements: string;
+		little_secrets: string;
+		big_secrets: string;
+		political_preference: string;
+		other_family: string;
+		notable_friends: string;
+		miscellany: string;
+	}
 
-async function getCharacter() {
-	let joomlaId:number = await resolveJoomlaSession()
-	let activeCharID:number = await getActiveCharacterId(joomlaId)
-	characterInformation = await getCharacterBackgroundInformation(activeCharID)
-}
+	let characterInformation:characterInformation = {
+		id: 0,
+		characterID: 0,
+		chargen_name: "",
+		first_name: "",
+		family_name: "",
+		residence: "",
+		homeplanet: "",
+		birthplanet: "",
+		birthdate: "",
+		name_father: "",
+		name_mother: "",
+		birthplace: "",
+		faction: "",
+		education: "",
+		current_position: "",
+		bloodtype: "",
+		religion: "",
+		company_ownership: "",
+		court_accusations: "",
+		court_sentences: "",
+		special_medical_circumstances: "",
+		memberships: "",
+		life_achievements: "",
+		little_secrets: "",
+		big_secrets: "",
+		political_preference: "",
+		other_family: "",
+		notable_friends: "",
+		miscellany: ""
+	}
 
+	beforeUpdate(() => {
+		getCharacter();
+	});
+
+	async function getCharacter() {
+		let joomlaId:number = await resolveJoomlaSession()
+		let activeCharID:number = await getActiveCharacterId(joomlaId)
+		characterInformation = await getCharacterBackgroundInformation(activeCharID)
+	}
 </script>
 
 <style>
@@ -82,16 +119,18 @@ async function getCharacter() {
 		margin:0.8rem 0;
 		}
 	.gridleft {grid-column-start:1;}
-	button{ height:3rem;}
 </style>
 
-<button on:click={getCharacter}>get Character</button>
+<header>
+	<h1>{characterInformation.chargen_name} - {characterInformation.faction}</h1>
+	<button><Fa icon={faArrowLeft}/> Back to character options</button>
+	<hr/>
+	<p>This is where you edit your character's background check information.
+	Other players can learn this information ingame with certain abilities.</p>
+</header>
+
+
 <div class="formgrid">
-
-<label class="gridleft"><Fa icon={faUser}/> Full Name <input type="text" disabled value={characterInformation.chargen_name}></label> 
-
-<label class="gridleft"><Fa icon={faUsers}/> Faction <input type="text" disabled value={characterInformation.faction}></label>
-
 
 <label class="gridleft"><Fa icon={faUser}/> First Name
 <input type="text" value={characterInformation.first_name}></label> 
