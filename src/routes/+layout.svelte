@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
 	import '../app.css';
 </script>
 
@@ -15,29 +13,6 @@
 		alt="id card"
 		title="Background Check ID Card"
 	/>
-	<nav>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundform'}
-			href="/backgroundform"
-		>
-			Background Form
-		</a>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundsearch'}
-			href="/backgroundsearch"
-		>
-			SL Tool: Background Search
-		</a>
-		<a
-			class="nav-hover-effect"
-			class:active={$page.url.pathname === '/backgroundlist'}
-			href="/backgroundlist"
-		>
-			SL Tool: Background Filled List
-		</a>
-	</nav>
 </header>
 <main>
 	<slot />
@@ -50,6 +25,7 @@
 	header {
 		display: flex;
 		grid-area: logo;
+		font-family: 'Roboto-light', sans-serif, arial;
 		background: var(--background-color-z2);
 		width: 100%;
 		height: 6.4rem;
@@ -79,7 +55,9 @@
 		max-width: 10rem;
 		font-size: 1.5rem;
 		right: 0.6rem;
-		bottom: -1rem;
+		bottom: -2.55rem;
+		line-height: 1.2;
+		font-weight: 500;
 	}
 	.logo-text {
 		text-align: right;
@@ -96,40 +74,18 @@
 		box-sizing: border-box;
 		background: var(--background-color-z1);
 		display: flex;
-		height: 100%;
+		height: 100.2%;
 		overflow-y: auto;
 		overflow-x: hidden;
-		border-top: 0.2rem dashed var(--background-color-z0);
 	}
 	footer {
 		grid-area: footer;
 		background: var(--background-color-z2);
 		width: 100%;
-		font-size: 14px;
+		font-size: 1.4rem;
 	}
 	.footertext {
 		margin: 0.8rem;
 		color: var(--faded-text-color);
-	}
-
-	nav {
-		font-size: 20px;
-	}
-	a {
-		color: var(--white-text-color);
-		text-decoration: none;
-	}
-	.nav-hover-effect {
-		background: linear-gradient(var(--white-text-color) 0 0) no-repeat
-			calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + 0.2rem);
-		transition: 0.3s calc(var(--i, 0) * 0.3s),
-			background-position 0.3s calc(0.3s - calc(var(--i, 0) * 0.3s));
-	}
-	.nav-hover-effect:hover {
-		--i: 1;
-		color: var(--background-color-z2);
-	}
-	.active {
-		box-shadow: inset 0 -0.2rem 0 0 var(--white-text-color);
 	}
 </style>

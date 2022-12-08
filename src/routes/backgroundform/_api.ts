@@ -1,9 +1,9 @@
 let joomlaUserData: any;
 let characterBackgroundInfo: any;
 let activeCharacterId: any;
-let userType: string;
-let orthanc: string = 'https://api.eosfrontier.space/orthanc/v2/';
-let orthancdev: string = 'https://apidev2.eosfrontier.space/orthanc/v2/';
+// let userType: string;
+const orthanc: string = 'https://api.eosfrontier.space/orthanc/v2/';
+const orthancdev: string = 'https://apidev2.eosfrontier.space/orthanc/v2/';
 
 export async function resolveJoomlaSession() {
 	let response = { id: '747', groups: ['2', '11', '17', '21', '28', '33', '36', '37', '42', '58'] };

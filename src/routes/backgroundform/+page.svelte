@@ -102,147 +102,167 @@
 	}
 </script>
 
-<header>
-	<h1>{characterInformation.chargen_name} - {characterInformation.faction}</h1>
-	<button><Fa icon={faArrowLeft} /> Back to character options</button>
-	<hr />
-	<p>
-		This is where you edit your character's background check information. Other players can learn
-		this information ingame with certain abilities.
-	</p>
-</header>
+<div class="pagegrid">
+	<header>
+		<h1>{characterInformation.chargen_name} - {characterInformation.faction}</h1>
+		<button><Fa icon={faArrowLeft} /> Back to character options</button>
+		<hr />
+		<p>
+			This is where you edit your character's background check information. Other players can learn
+			this information ingame with certain abilities.
+		</p>
+	</header>
+	<!-- src="/eoschargen/img/passphoto/{characterInformation.characterID}.jpg" -->
+	<img class="passphoto" alt="passphoto" onerror="this.src='images/nopassphoto.png';" />
 
-<div class="formgrid">
-	<label class="gridleft"
-		><Fa icon={faUser} /> First Name
-		<input type="text" value={characterInformation.first_name} /></label
-	>
+	<div class="formcarousel">
+		<section>
+			<label
+				><Fa icon={faUser} /> First Name
+				<input type="text" value={characterInformation.first_name} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faUser} /> Family Name
-		<input type="text" value={characterInformation.family_name} /></label
-	>
+			<label
+				><Fa icon={faUser} /> Family Name
+				<input type="text" value={characterInformation.family_name} /></label
+			>
+			<label
+				><Fa icon={faCalendarAlt} /> Birthdate
+				<input type="text" value={characterInformation.birthdate} /></label
+			>
+			<label
+				><Fa icon={faGlobe} /> Birthplanet
+				<input type="text" value={characterInformation.birthplanet} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faHouse} /> Residence
-		<input type="text" value={characterInformation.residence} /></label
-	>
+			<label
+				><Fa icon={faCity} /> Birthplace
+				<input type="text" value={characterInformation.birthplace} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faGlobe} /> Homeplanet
-		<input type="text" value={characterInformation.homeplanet} /></label
-	>
+			<label
+				><Fa icon={faGlobe} /> Homeplanet
+				<input type="text" value={characterInformation.homeplanet} /></label
+			>
+			<label
+				><Fa icon={faHouse} /> Residence
+				<input type="text" value={characterInformation.residence} /></label
+			>
+		</section>
+		<section>
+			<label
+				><Fa icon={faUser} /> Name Parent/Guardian 1
+				<input type="text" value={characterInformation.name_father} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faGlobe} /> Birthplanet
-		<input type="text" value={characterInformation.birthplanet} /></label
-	>
+			<label
+				><Fa icon={faUser} /> Name Parent/Guardian 2
+				<input type="text" value={characterInformation.name_mother} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faCity} /> Birthplace
-		<input type="text" value={characterInformation.birthplace} /></label
-	>
+			<label
+				><Fa icon={faUsers} /> Other Family
+				<input type="text" value={characterInformation.other_family} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faCalendarAlt} /> Birthdate
-		<input type="text" value={characterInformation.birthdate} /></label
-	>
+			<label
+				><Fa icon={faUserGroup} /> Notable Friends
+				<input type="text" value={characterInformation.notable_friends} /></label
+			>
+			<label
+				><Fa icon={faHandsPraying} /> Religion
+				<input type="text" value={characterInformation.religion} /></label
+			>
+			<label
+				><Fa icon={faDroplet} /> Bloodtype
+				<input type="text" value={characterInformation.bloodtype} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faUser} /> Name Parent/Guardian 1
-		<input type="text" value={characterInformation.name_father} /></label
-	>
+			<label
+				><Fa icon={faNotesMedical} /> Special Medical Circumstances
+				<input type="text" value={characterInformation.special_medical_circumstances} /></label
+			>
+		</section>
+		<section>
+			<label
+				><Fa icon={faAngleDoubleUp} /> Current Position
+				<input type="text" value={characterInformation.current_position} /></label
+			>
+			<label
+				><Fa icon={faGraduationCap} /> Education
+				<input type="text" value={characterInformation.education} /></label
+			>
+			<label
+				><Fa icon={faAward} /> Life Achievements
+				<input type="text" value={characterInformation.life_achievements} /></label
+			>
+			<label
+				><Fa icon={faBriefcase} /> Company Ownership
+				<input type="text" value={characterInformation.company_ownership} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faUser} /> Name Parent/Guardian 2
-		<input type="text" value={characterInformation.name_mother} /></label
-	>
+			<label
+				><Fa icon={faIdCardClip} /> Memberships
+				<input type="text" value={characterInformation.memberships} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faUsers} /> Other Family
-		<input type="text" value={characterInformation.other_family} /></label
-	>
+			<label
+				><Fa icon={faHandcuffs} /> Court Accusations
+				<input type="text" value={characterInformation.court_accusations} /></label
+			>
 
-	<label class="gridleft"
-		><Fa icon={faUserGroup} /> Notable Friends
-		<input type="text" value={characterInformation.notable_friends} /></label
-	>
+			<label
+				><Fa icon={faBuildingColumns} /> Court Sentences
+				<input type="text" value={characterInformation.court_sentences} /></label
+			>
+		</section>
+		<section>
+			<label
+				><Fa icon={faMask} /> Little Secrets
+				<input type="text" value={characterInformation.little_secrets} /></label
+			>
+			<label
+				><Fa icon={faUserSecret} /> Big Secrets
+				<input type="text" value={characterInformation.big_secrets} /></label
+			>
 
-	<label
-		><Fa icon={faGraduationCap} /> Education
-		<input type="text" value={characterInformation.education} /></label
-	>
+			<label
+				><Fa icon={faEllipsis} /> Miscellany
+				<input type="textarea" value={characterInformation.miscellany} /></label
+			>
+		</section>
+	</div>
 
-	<label
-		><Fa icon={faAngleDoubleUp} /> Current Position
-		<input type="text" value={characterInformation.current_position} /></label
-	>
-
-	<label
-		><Fa icon={faHandsPraying} /> Religion
-		<input type="text" value={characterInformation.religion} /></label
-	>
-
-	<label
-		><Fa icon={faIdCardClip} /> Memberships
-		<input type="text" value={characterInformation.memberships} /></label
-	>
-
-	<label
-		><Fa icon={faBriefcase} /> Company Ownership
-		<input type="text" value={characterInformation.company_ownership} /></label
-	>
-
-	<label
-		><Fa icon={faHandcuffs} /> Court Accusations
-		<input type="text" value={characterInformation.court_accusations} /></label
-	>
-
-	<label
-		><Fa icon={faBuildingColumns} /> Court Sentences
-		<input type="text" value={characterInformation.court_sentences} /></label
-	>
-
-	<label
-		><Fa icon={faDroplet} /> Bloodtype
-		<input type="text" value={characterInformation.bloodtype} /></label
-	>
-
-	<label
-		><Fa icon={faNotesMedical} /> Special Medical Circumstances
-		<input type="text" value={characterInformation.special_medical_circumstances} /></label
-	>
-
-	<label
-		><Fa icon={faAward} /> Life Achievements
-		<input type="text" value={characterInformation.life_achievements} /></label
-	>
-
-	<label
-		><Fa icon={faMask} /> Little Secrets
-		<input type="text" value={characterInformation.little_secrets} /></label
-	>
-	<label
-		><Fa icon={faUserSecret} /> Big Secrets
-		<input type="text" value={characterInformation.big_secrets} /></label
-	>
-
-	<label
-		><Fa icon={faEllipsis} /> Miscellany
-		<input type="textarea" value={characterInformation.miscellany} /></label
-	>
+	<button class="save">Save Changes</button>
 </div>
 
 <style>
+	.pagegrid {
+		display: grid;
+		grid-template-columns: auto auto 150px;
+		grid-template-rows: 180px 640px 75px;
+		gap: 0px 0px;
+		grid-template-areas:
+			'header header passphoto'
+			'formcarousel formcarousel formcarousel'
+			'save save save';
+		padding: 15px;
+	}
+	header {
+		grid-area: header;
+	}
+	.passphoto {
+		grid-area: passphoto;
+	}
+	.formcarousel {
+		grid-area: formcarousel;
+	}
+	.save {
+		grid-area: save;
+	}
+
 	input[type='text'] {
 		display: block;
-	}
-	.formgrid {
-		width: 100%;
-		display: grid;
-		padding: 1.5rem;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-flow: row dense;
 	}
 	label {
 		display: block;
@@ -250,7 +270,49 @@
 		line-height: 1.6;
 		margin: 0.8rem 0;
 	}
-	.gridleft {
-		grid-column-start: 1;
+	input[type='text'] {
+		background: none;
+		border: 0;
+		border-bottom: 2px solid var(--faded-text-color);
+		color: var(--faded-text-color);
+		padding: 0.8rem 0.25rem;
+		transition: 0.3s;
+	}
+	input[type='text']:hover,
+	input[type='text']:active,
+	input[type='text']:focus {
+		border: 0;
+		color: var(--white-text-color);
+		border-bottom: 2px solid var(--chargen-blue);
+	}
+	input[type='textarea'] {
+		background: var(--background-color-z3);
+		margin-top: 1rem;
+		padding: 5px 5px 0 5px;
+		border: 1px solid var(--faded-text-color);
+		resize: both;
+		overflow: auto;
+	}
+	input[type='textarea']:hover,
+	input[type='textarea']:active,
+	input[type='textarea']:focus {
+		border: 1px solid var(--chargen-blue);
+		color: var(--white-text-color);
+	}
+
+	.formcarousel {
+		font-family: sans-serif;
+		display: flex;
+	}
+
+	section {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 1fr);
+
+		padding: 1rem;
+		width: 270px;
+		scroll-snap-align: start;
+		position: relative;
 	}
 </style>
